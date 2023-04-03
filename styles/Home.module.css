@@ -1,0 +1,63 @@
+
+.scroll {
+  width: 100vw;
+  height: 500vh;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: top 0.3s;
+  background: radial-gradient(circle at top, rgba(255,255,255, 1) 10%, rgba(255,255,255, .1) 100%);
+  padding: 1rem;
+}
+
+.nav.hidden {
+  top: -100px;
+}
+
+body.scrolled nav {
+  top: -100px;
+}
+
+.btn {
+  cursor: pointer;
+}
+.mymodal {
+  background: rgba(0,0,0,.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modalСontainer {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: #fff;
+  border-radius: 5px;
+  border: 2px #cecece solid;
+  box-shadow: 2px 2px #cdcdcd;
+  padding: 0 2rem;
+}
+
+.rank {
+  text-align: center;
+}
+
+.myclose {
+  position: fixed;
+  right: 2rem;
+  top: 1rem;
+}
