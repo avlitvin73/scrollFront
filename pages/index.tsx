@@ -18,10 +18,10 @@ const joinClasses = (...classes: string[]) => {
   return classes.map((className) => styles[className]).join(" ");
 };
 
-const Home: NextPage = ({ initialData }:any) => {
+const Home: NextPage = () => {
   
   const [isModalOpen, setIsModalOpen] = useState(false)
-  const [data, setData] = useState(initialData)
+  const [data, setData] = useState([])
   const [scroll, setScroll] = useState(0)
   const [direction, setDirection] = useState(true)
   const scrollSection = useRef<HTMLDivElement>()
@@ -128,15 +128,5 @@ const nameCutter = (str, num) => {
   )
 }
 
-export async function getServerSideProps() {
-  // Fetch data from external API
-  const req = await axios.post('https://scrollRank.aleksandrlitvin.repl.co', {
-        name: ``,
-        scroll: 0
-      })
-    const data = await req.data
-      return { props: {initialData: [...data]} }
-   
-}
 
 export default Home
