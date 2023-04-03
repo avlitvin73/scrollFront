@@ -5,7 +5,6 @@ import styles from '../styles/Home.module.css'
 import bg from '../public/img/ground.webp'
 import { useState, useEffect, useRef } from "react";
 import axios from 'axios';
-import {emoji} from './emoji'
 
 
 const joinClasses = (...classes: string[]) => {
